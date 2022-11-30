@@ -1,0 +1,35 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    padding: 1em 1.5em;
+    @include for-size(lg){
+        align-items: center;
+    }
+    @include for-size(sm){
+        padding: auto 3em;
+    }
+}
+main{
+    width: fit-content;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    @include for-size(exsmall){
+        left: 50%;
+        transform: translate(-50%);
+        white-space: nowrap;;
+    }
+    @include for-size(sm){
+        bottom: 0;
+    }
+}

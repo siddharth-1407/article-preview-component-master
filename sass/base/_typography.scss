@@ -1,0 +1,73 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+body{
+    background-color: map-get($colors, white-bg );
+}
+.article__content{
+    h1{
+        color: map-get($colors, dk-grayish-blue );
+        font-size: 1.03rem;
+        font-weight: map-get($font-weights, fw700 );
+
+        @include for-size(sm){
+            font-size: 1.3rem;
+        }
+        @include for-size(md){
+            font-size: 1.23rem;
+        }
+        @include for-size(lg){
+            font-size: 1.28rem; 
+            line-height: 1.5; 
+        }
+        @include for-size(xl){
+            font-size: 1.3rem;
+            line-height: 1.3;
+        }
+    }
+    p{
+        font-size: $font-size;
+        color: map-get($colors, grayish-blue );
+        line-height: 1.5;
+        font-weight: map-get($colors, fw500 );
+        @include for-size(sm){
+            font-size: 0.9rem;
+        }
+        @include for-size(md){
+            font-size: 0.88rem;
+        }
+        @include for-size(lg){
+            font-size: 0.9rem;
+        }
+        @include for-size(xl){
+            font-size: $font-size;
+        }
+    }
+}
+
+.name-date{
+    .name{
+        font-weight: map-get($font-weights, fw700 );
+        font-size: $font-size;
+        color: map-get($colors, dk-grayish-blue );
+        @include for-size(sm){
+            font-size: 1rem;
+        }
+    }
+    .date{
+        font-size: 0.813rem;
+        color: map-get($colors, grayish-blue );
+        @include for-size(sm){
+            font-size: $font-size;
+        }
+    }
+
+}
+.social-links-window{
+    span{
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-size: 0.80rem;
+        color: map-get($colors, lite-grayish-blue );
+    }
+}

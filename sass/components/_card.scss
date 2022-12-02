@@ -54,7 +54,7 @@ article{
     }
 }
 @media (hover :hover){
-    article:hover .image-container img{
+    article:hover .article-image{
     transform: scale(1.1);
     }
     .article__content h1:hover{
@@ -76,12 +76,15 @@ article{
     }
     @include for-size(lg){
         max-height: none;
+        border-bottom-left-radius: 0.5em;
+        border-top-left-radius: 0.5em;
     }
     @include for-size(xl){
         min-width: 270px;
         max-height: none;
     }
-    img{
+    a{
+        img{
         display: block;
         width: 100%;
         transform: translateY(-1em);
@@ -113,6 +116,8 @@ article{
             width: 100%;
             height: 100%;
         }
+    }
+    
     }
 }
 
@@ -256,6 +261,7 @@ article{
     transform: rotate(45deg);
     }
 }
+
 
 
 

@@ -245,7 +245,7 @@ article .article__content {
 }
 
 @media (hover: hover) {
-  article:hover .image-container img {
+  article:hover .article-image {
     transform: scale(1.1);
   }
   .article__content h1:hover {
@@ -271,6 +271,8 @@ article .article__content {
 @media (min-width: 992px) {
   .image-container {
     max-height: none;
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
   }
 }
 @media (min-width: 1200px) {
@@ -279,7 +281,7 @@ article .article__content {
     max-height: none;
   }
 }
-.image-container img {
+.image-container a img {
   display: block;
   width: 100%;
   transform: translateY(-1em);
@@ -290,12 +292,12 @@ article .article__content {
   transition: 200ms ease-in-out;
 }
 @media (min-width: 576px) {
-  .image-container img {
+  .image-container a img {
     transform: translateY(-1em);
   }
 }
 @media (min-width: 768px) {
-  .image-container img {
+  .image-container a img {
     transform: translateY(0);
     min-width: 123%;
     height: 100%;
@@ -306,7 +308,7 @@ article .article__content {
   }
 }
 @media (min-width: 992px) {
-  .image-container img {
+  .image-container a img {
     transform: translateY(0em);
     height: 100%;
     width: 123%;
@@ -315,7 +317,7 @@ article .article__content {
   }
 }
 @media (min-width: 1200px) {
-  .image-container img {
+  .image-container a img {
     width: 100%;
     height: 100%;
   }
